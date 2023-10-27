@@ -27,7 +27,7 @@ Firstly, we attempted to identify three different types of cataracts through fun
 
 This is the training process for cataract type classification under different backbone networks:
 
-<img src="./img/trainprocess.png" width="900px">
+<img src="./img/trainprocess.png" width="1000px">
 
 | Method     | ACC     | Sen    | F1     | Kappa   |
 |------------|---------|--------|--------|---------|
@@ -103,12 +103,32 @@ Please refer to our research article for more information
 
 Cataract patients may also suffer from other blinding eye diseases, so ophthalmologists have to diagnose them before surgery. The cloudy lens in cataract patients causes a hazy degeneration in the fundus image, making it challenging to observe the patient's retinal vessels. This poses difficulties for ophthalmologists in their work. Previous researchers have proposed different methods to enhance fundus images of cataract patients. However, these works did not consider the fuzzy characteristics of different types and degrees of cataracts.
 
-<img src="/root/work2023/deep-learning-for-image-processing-master/pytorch_classification/DCEN_git/Dual_Stream_Cataract_Evaluation_Network/img/Anatomy-of-the-Eye.png" width="400px">
+We hope that our work can inspire researchers to achieve more precise and clear denoising of cataract fundus images.
+
+
+<img src="./img/Anatomy-of-the-Eye.png" width="400px">
 
 
 
+Vessel location annotation based on http://www.jinglingbiaozhu.com/ 
 
 
+## additional code
+
+/utils/process_img.py
+Edge detection and magnification of fundus images
+
+
+/utils/GaussianBlur.py
+Gaussian transformation of images, highlighting vascular features
+
+
+/utils/read_txt_cut.py
+Cutting vascular images based on annotated coordinate positions
+
+
+/utils/entropy_cla.py
+Calculate the information entropy of vascular images
 
 
 ## environment
